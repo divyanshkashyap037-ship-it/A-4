@@ -1,0 +1,342 @@
+@font-face {
+    font-family: naked;
+    src: url(./fonts/Naked\ Power\ Bd.otf);
+}
+
+@font-face {
+    font-family: plus;
+    src: url(./fonts/PlusJakartaSans-VariableFont_wght.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100vw;
+    height: 100vh;
+    font-family: sans-serif;
+    overflow: hidden; /* prevent page scrolling */
+}
+
+body {
+    display: grid;
+    grid-template-columns: 5% 35% 60%;
+}
+
+aside {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 100px;
+    padding: 90px 0;
+    font-family: plus;
+    font-weight: 600;
+}
+
+aside h4 {
+    transform: rotate(-90deg);
+}
+
+.about-me {
+    font-size: 19px;
+    font-weight: 500;
+    color: black;
+    position: absolute;
+}
+
+main{
+    color: aliceblue;
+    padding: 20px 0;
+    font-family: plus;
+    margin-right: 30px;
+}
+
+.about-me{
+    transform: translate(30%,10%);
+}
+
+.white-border {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    border: 5px solid #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 65%;
+    margin-bottom: 10%;
+}
+
+.pink-bg {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: #EFAEFF;
+}
+
+.jon-photo {
+    height: 320px;
+    position: absolute;
+    transform: translate(-20%, -20%);
+}
+
+.card {
+    background-color: #8184D2;
+    padding: 35px 30px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    justify-content: flex-end;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    position: relative;
+    clip-path: polygon(
+                0% 6%,
+                35% 6%,
+                43% 0%,
+                100% 0%,
+                100% 100%,
+                0% 100%)
+}
+
+.black-circle{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    background-image: url(./assets/black-circle.png);
+    background-size: cover;
+    right: 10%;
+}
+
+.im {
+    font-weight: 100;
+    font-size: 60px;
+}
+
+.name {
+    font-weight: 500;
+    font-size: 60px;
+    line-height: 1;
+}
+
+.mail {
+    font-weight: 400;
+    margin-top: 20px;
+    margin-left: 5px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px dashed #fff;
+}
+
+section{
+    display: grid;
+    grid-template-areas: 
+    "h h h"
+    "s1 s1 s2"
+    "s1 s1 s2"
+    "s3 s4 s4";
+    padding: 20px 20px 20px 0;
+    gap: 15px;
+    font-family: plus;
+}
+
+header{
+    grid-area: h;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+}
+
+header h1{
+    font-size: 100px;
+    font-family: naked;
+    letter-spacing: 10px;
+}
+
+.section1{
+    grid-area: s1;
+    padding: 10px 0;  
+}
+
+.bird-img{
+    width: 100%;
+    height: 300px;
+    background-color: #8184D2;
+    border-radius: 20px;
+    background-image: url(./assets/bird-wide.png);
+    background-size: cover;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.play-btn{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow:
+        0 0 0 1px rgba(255, 255, 255, 0.03),
+        0 8px 30px rgba(0, 0, 0, 0.65),
+        inset 0 2px 2px rgba(255, 255, 255, 0.05);;
+}
+
+.ri-play-fill{
+    font-size: 20px;
+}
+
+.section2{
+    grid-area: s2;
+    padding: 10px 0;
+}
+
+.number{
+    font-family: naked;
+    font-size: 40px;
+}
+
+.blue-box{
+    height: 150px;
+    background-color: #8DE0D8;
+    border-radius: 20px 20px 0 0;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    line-height: 0.6;
+    padding-left: 35%;
+}
+
+.purple-box{
+    background-color: #956CD3;
+    height: 150px;
+    border-radius: 0 0 20px 20px;
+    color: #fff;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    line-height: 0.6;
+    padding-left: 35%;
+}
+
+.section3{
+    grid-area: s3;
+    background-color: #585858;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    height: 150px;
+    position: relative;
+}
+
+.ri-apple-fill{
+    font-size: 30px;
+}
+
+.section4{
+    grid-area: s4;
+}
+
+.black-box{
+    background-color: black;
+    height: 100%;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.left-part{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ball-img{
+    height: 120px;
+    width: 120px;
+    background-image: url(./assets/ball.png);
+    background-size: cover;
+    position: relative;
+}
+
+.yellow-box{
+    height: 100%;
+    width: 50%;
+    background-color: #FEB867;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    padding-left: 15%;
+}
+
+.det{
+    font-size: 18px;
+    font-weight: 300;
+}
+
+header .ri-arrow-up-s-line {
+    transform: rotate(45deg);
+    position: absolute;
+    font-size: 50px;
+    top: 3%;
+    right: 40%;
+    font-weight: bolder;
+}
+
+.bird-img .ri-arrow-up-s-line {
+    transform: rotate(45deg);
+    position: absolute;
+    font-size: 25px;
+    top: 5%;
+    right: 4%;
+    color: #fff;
+}
+
+.section2 .ri-arrow-up-s-line {
+    transform: rotate(45deg);
+    position: absolute;
+    font-size: 25px;
+    top: 5%;
+    right: 5%;
+}
+
+.section3 .ri-arrow-up-s-line{
+    transform: rotate(45deg);
+    position: absolute;
+    font-size: 25px;
+    top: 5%;
+    right: 5%;
+}
+
+.section4 .ri-arrow-up-s-line {
+    transform: rotate(45deg);
+    position: absolute;
+    font-size: 25px;
+    top: 5%;
+    right: 5%;
+}
+/*made by divyansh*/
+
